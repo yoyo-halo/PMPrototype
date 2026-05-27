@@ -424,9 +424,9 @@
 }
 
 .action-icon-btn {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-light);
-  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
   padding: 3px 7px;
   border-radius: 3.5px;
   cursor: pointer;
@@ -440,9 +440,9 @@
 }
 
 .action-icon-btn:hover {
-  background: rgba(99, 102, 241, 0.12);
-  color: #c7d2fe;
-  border-color: rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.15);
+  color: #ffffff;
+  border-color: rgba(99, 102, 241, 0.4);
 }
 
 /* Copied active feedback */
@@ -455,12 +455,15 @@
 
 .action-icon-btn.delete {
   padding: 2.5px 4.5px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.25);
 }
 
 .action-icon-btn.delete:hover {
-  background: rgba(244, 63, 94, 0.15);
-  color: #fda4af;
-  border-color: rgba(244, 63, 94, 0.25);
+  background: rgba(220, 38, 38, 0.35);
+  color: #ffffff;
+  border-color: rgba(220, 38, 38, 0.55);
 }
 
 /* Empty State */
@@ -568,6 +571,31 @@
   text-overflow: ellipsis;
   max-width: 80%;
   letter-spacing: 0.01em;
+}
+
+.modal-title-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1.2px dashed rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 750;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 0.01em;
+  padding: 2px 4px;
+  width: 75%;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-title-input:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-title-input:focus {
+  border-bottom-color: rgba(99, 102, 241, 0.8);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px 4px 0 0;
 }
 
 .modal-close-btn {

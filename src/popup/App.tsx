@@ -408,6 +408,21 @@ export default function App() {
     showToast('已删除记录');
   };
 
+  const handleRenameItem = async (id: string, newTitle: string) => {
+    const updatedHistory = history.map((item) => {
+      if (item.id === id) {
+        const updatedItem = { ...item, title: newTitle };
+        if (selectedItem?.id === id) {
+          setSelectedItem(updatedItem);
+        }
+        return updatedItem;
+      }
+      return item;
+    });
+    setHistory(updatedHistory);
+    await chrome.storage.local.set({ history: updatedHistory });
+  };
+
   const handleClearAll = async () => {
     if (window.confirm('确定要清除所有拾取历史吗？')) {
       await clearHistory();
@@ -613,7 +628,14 @@ export default function App() {
           <div className="modal-overlay" onClick={() => setSelectedItem(null)} onMouseDown={(e) => e.stopPropagation()}>
             <div className="preview-modal" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
-                <span className="modal-title" title={selectedItem.title}>{selectedItem.title}</span>
+                <input
+                  type="text"
+                  value={selectedItem.title}
+                  onChange={(e) => handleRenameItem(selectedItem.id, e.target.value)}
+                  className="modal-title-input"
+                  title="点击编辑元素名称"
+                  placeholder="编辑元素名称..."
+                />
                 <button className="modal-close-btn" onClick={() => setSelectedItem(null)}>×</button>
               </div>
 
