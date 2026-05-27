@@ -42,7 +42,7 @@ export default function App() {
       ?.shadowRoot?.getElementById('pm-picker-floating-container');
     if (!container) return;
     
-    const width = isCollapsed ? 104 : 360;
+    const width = isCollapsed ? 116 : 360;
     const height = isCollapsed ? 32 : 620;
 
     container.style.width = `${width}px`;
@@ -113,7 +113,7 @@ export default function App() {
       let newX = startX + deltaX;
       let newY = startY + deltaY;
 
-      const width = isCollapsed ? 104 : 360;
+      const width = isCollapsed ? 116 : 360;
       const height = isCollapsed ? 32 : 620;
       const maxLeft = window.innerWidth - width;
       const maxTop = window.innerHeight - height;

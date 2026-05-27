@@ -92,10 +92,10 @@
 }
 
 .brand-icon {
-  color: var(--color-accent);
+  color: #818cf8;
   display: flex;
   align-items: center;
-  filter: drop-shadow(0 0 4px rgba(99, 102, 241, 0.4));
+  filter: drop-shadow(0 0 6px rgba(129, 140, 248, 0.65));
 }
 
 .brand-title {
@@ -114,9 +114,9 @@
 }
 
 .ctrl-action-btn {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -129,20 +129,21 @@
 }
 
 .ctrl-action-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 /* Collapsed Locator Status Pill */
 .collapsed-locator-panel {
-  width: 104px;
+  width: 116px;
   height: 32px;
   border-radius: 16px;
   background: rgba(10, 15, 30, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(99, 102, 241, 0.08);
   display: flex;
   align-items: center;
@@ -152,6 +153,7 @@
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: auto;
   user-select: none;
+  white-space: nowrap;
 }
 
 .collapsed-locator-panel:hover {
@@ -167,7 +169,8 @@
 }
 
 .locator-icon {
-  color: var(--color-accent);
+  color: #818cf8;
+  filter: drop-shadow(0 0 3px rgba(129, 140, 248, 0.5));
 }
 
 .collapsed-locator-panel.picking .locator-icon {
@@ -179,6 +182,7 @@
   font-size: 11.5px;
   font-weight: 700;
   color: #c7d2fe;
+  white-space: nowrap;
 }
 
 .collapsed-locator-panel.picking .locator-text {
@@ -607,9 +611,9 @@
 }
 
 .modal-close-btn {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -623,9 +627,10 @@
 }
 
 .modal-close-btn:hover {
-  background: rgba(244, 63, 94, 0.15);
-  color: #fda4af;
-  border-color: rgba(244, 63, 94, 0.25);
+  background: rgba(244, 63, 94, 0.25);
+  color: #ffffff;
+  border-color: rgba(244, 63, 94, 0.45);
+  box-shadow: 0 0 8px rgba(244, 63, 94, 0.2);
 }
 
 /* Sandboxed Iframe Preview */
@@ -894,13 +899,15 @@
 
 /* Control buttons adjustments */
 .ctrl-action-btn.drag-handle-btn:hover {
-  background: rgba(99, 102, 241, 0.2);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.45);
   color: #ffffff;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.25);
 }
 
 .ctrl-action-btn.close-btn:hover {
-  background: rgba(244, 63, 94, 0.2);
-  border-color: rgba(244, 63, 94, 0.4);
-  color: #fda4af;
+  background: rgba(244, 63, 94, 0.25);
+  border-color: rgba(244, 63, 94, 0.45);
+  color: #ffffff;
+  box-shadow: 0 0 8px rgba(244, 63, 94, 0.25);
 }
