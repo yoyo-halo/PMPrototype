@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "PM原型拾取器",
+  "version": "1.0.0",
+  "description": "用于从任意网页提取UI设计与原型信息，支持结构化JSON和HTML/CSS双模式导出",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite",
+    "unlimitedStorage"
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/index.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/index.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

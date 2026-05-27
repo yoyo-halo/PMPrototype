@@ -1,0 +1,21 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// A simple valid 128x128 PNG image base64 (blue square with rounded style representation)
+const base64Png = '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';
+
+const iconsDir = path.join(__dirname, '..', 'public', 'icons');
+if (!fs.existsSync(iconsDir)){
+  fs.mkdirSync(iconsDir, { recursive: true });
+}
+
+const buffer = Buffer.from(base64Png, 'base64');
+fs.writeFileSync(path.join(iconsDir, 'icon16.png'), buffer);
+fs.writeFileSync(path.join(iconsDir, 'icon48.png'), buffer);
+fs.writeFileSync(path.join(iconsDir, 'icon128.png'), buffer);
+
+console.log("Icons created successfully!");
